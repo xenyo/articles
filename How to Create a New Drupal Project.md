@@ -87,23 +87,39 @@ git push
 
 ### 5. Create a new virtual host to map a domain name to your project.
 
-Create a new virtual host configuration file:
-
-```
-vim /etc/apache2/sites-available/PROJECT_NAME.conf
-```
-
-Insert the following text into the file:
+Create a new virtual host configuration file at `/etc/apache2/sites-available/PROJECT_NAME.conf` and insert the following text into the file:
 
 ```
 <VirtualHost *:80>
   ServerName MY_PROJECT
-  DocumentRoot /var/www/MY_PROJECT
+  DocumentRoot /var/www/MY_PROJECT/web
 </VirtualHost>
 ```
 
-Then, add the following line to your hosts file (`C:\Windows\System32\drivers\etc\hosts` on Windows, `/etc/hosts` on Mac)
+Then, enable the virtual host and restart Apache:
 
 ```
-127.0.0.1 MY_PROJECT
+a2ensite PROJECT_NAME.conf
 ```
+
+```
+service apache2 restart
+```
+
+### 6. Add the domain name to your hosts file
+
+Add the following line to your hosts file (`C:\Windows\System32\drivers\etc\hosts` on Windows, `/etc/hosts` on Mac):
+
+```
+127.0.0.1 PROJECT_NAME
+```
+
+### 7. Create a new database for the project
+
+```
+mysql -hmariadb -e 'create database PROJECT_NAME';
+```
+
+### 8. Open the site in the browser to complete the installation.
+
+For example, if you used the PHP 8.1 container, the URL would be http://PROJECT_NAME:8081
