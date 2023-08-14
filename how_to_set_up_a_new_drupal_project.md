@@ -1,4 +1,4 @@
-# How to Create a New Drupal Project
+# How to Set Up a New Drupal Project
 
 In this guide, you will learn how to set up a new Drupal project, initialize a Git repository and create a virtual host to serve the project locally.
 
