@@ -112,5 +112,5 @@ Now, you should be able to load the site in your browser by going to http://PROJ
 
 ## Next steps
 
-- [How to Set Up a Git Repository for a Drupal Project](set_up_git_for_drupal.md)
-- [How to Enable Development Settings on a Drupal Project](enable_drupal_development_settings.md)
+- [How to Set Up a Git Repository for a Drupal Project](set_up_git.md)
+- [How to Enable Development Settings on a Drupal Project](enable_development_settings.md)

@@ -121,4 +121,4 @@ Now, you should be able to load the site in your browser by going to http://PROJ
 
 ## Next Steps
 
-- [How to Enable Development Settings on a Drupal Project](enable_drupal_development_settings.md)
+- [How to Enable Development Settings on a Drupal Project](enable_development_settings.md)
